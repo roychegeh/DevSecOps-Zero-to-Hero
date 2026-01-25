@@ -1,0 +1,122 @@
+# DevSecOps-Zero-to-Hero
+
+## Day 1: The Mindset Shift & Threat Modeling
+
+**Focus**: Understanding the "Sec" in DevSecOps and planning before coding.
+
+### Concepts:
+- **What is DevSecOps?** (Shift Left vs. Shield Right)
+- **The 2026 Landscape**: AI-driven attacks vs. AI-driven defense
+- **Threat Modeling**: Using the STRIDE framework
+
+### Tool Spotlight:
+- OWASP Threat Dragon or PyTM
+
+### Hands-on Lab:
+- Perform a threat model for a simple 3-tier web application
+
+---
+
+## Day 2: DevSecOps for Git
+
+1. .gitignore  
+2. Native Git Pre-Commit Hooks (Custom Scripts)  
+3. Block commits with Gitleaks  
+4. Gitleaks -> Repository & History Scanning  
+5. Gitleaks in GitHub Actions  
+6. Branch Protection Rules  
+7. RBAC  
+8. Mandatory Reviews  
+9. CODEOWNERS  
+10. Dependabot  
+
+---
+
+## Day 3: Secret Management & Infrastructure as Code (IaC) Security
+
+**Focus**: Preventing credential leaks and securing your Terraform/Bicep code.
+
+### Concepts:
+- **Secret Sprawl**: Why `.env` and hardcoded keys are a disaster
+- **IaC Scanning**: Catching misconfigured S3 buckets or open Security Groups before deployment
+
+### Tool Spotlight:
+- TruffleHog (Secret Scanning)
+- Checkov or KICS (IaC Scanning)
+
+### Hands-on Lab:
+- Scan a "leaky" Terraform repo
+- Implement HashiCorp Vault for dynamic secret injection
+
+---
+
+## Day 4: Container & Kubernetes Security
+
+**Focus**: Securing the ship (Docker) and the harbor (K8s).
+
+### Concepts:
+- Distroless images and multi-stage builds
+- **Image Linting**: Finding "root" users and insecure instructions
+- **Kubernetes Admission Controllers** and Network Policies
+
+### Tool Spotlight:
+- Trivy (Image Scanning)
+- Hadolint (Docker Linting)
+
+### Hands-on Lab:
+- Scan a Docker image for CVEs
+- Deploy a "Secure-by-Default" Pod to a K8s cluster
+
+---
+
+## Day 5: Dynamic Testing (DAST) & API Security
+
+**Focus**: Testing the running application for real-world exploits.
+
+### Concepts:
+- **DAST** (Dynamic Application Security Testing): Attacking the app like a hacker
+- OWASP Top 10 (2026 Updates): Injection, Broken Access Control, etc.
+- Securing REST & GraphQL APIs
+
+### Tool Spotlight:
+- OWASP ZAP (Automation)
+- StackHawk
+
+### Hands-on Lab:
+- Run an automated ZAP baseline scan against a running staging environment
+- Generate a PDF report
+
+---
+
+## Day 6: Runtime Security & Compliance as Code
+
+**Focus**: Monitoring what happens AFTER deployment and staying compliant.
+
+### Concepts:
+- **Runtime Security**: Detecting drift and suspicious behavior (e.g., a shell opening in a container)
+- **eBPF**: The secret sauce of modern cloud-native security
+- **Compliance** (SOC2/GDPR) as an automated check
+
+### Tool Spotlight:
+- Falco (Runtime Detection)
+- Prowler (AWS/Azure/GCP Auditing)
+
+### Hands-on Lab:
+- Set up Falco to alert on Slack whenever someone runs `apt-get install` inside a production container
+
+---
+
+## Day 7: The Grand Finale – Building the Ultimate Pipeline
+
+**Focus**: Bringing it all together and the DevSecOps Career Roadmap.
+
+### The Master Project: Build a "Golden Pipeline" that includes:
+1. **Secret Scan** (Pre-commit)
+2. **SAST/SCA** (Build phase)
+3. **IaC Scan** (Provision phase)
+4. **DAST** (Post-deploy phase)
+5. **AI Fixes**: Use AI (like GitHub Copilot or Snyk AI) to auto-remediate a found bug
+
+### Career Guidance:
+- **Certifications**: CASE, CND, DevSecOps Foundation
+- **Resume Tips** and guidance for the future of the role
