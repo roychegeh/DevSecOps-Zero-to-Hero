@@ -1,1 +1,2 @@
-
+This is a test file for checking if i can be able to merge or commit in the main branch. Remember the main branch is already
+restricted for direct commits.
